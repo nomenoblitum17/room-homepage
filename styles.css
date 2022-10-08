@@ -1,0 +1,303 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+body {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+#nav-button {
+	background: transparent;
+	z-index: 50;
+	border: none;
+	display: none;
+}
+
+.top-container {
+	display: flex;
+}
+
+.header {
+	background: url("images/desktop-image-hero-1.jpg");
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	padding: 5%;
+	padding-right: 25%;
+	align-items: flex-start;
+	flex-grow: 2;
+	width: 1000px;
+}
+
+.logo {
+	object-fit: contain;
+}
+
+.normal-nav {
+	display: flex;
+	margin: 0 100% 0 30px;
+}
+
+.normal-nav a {
+	margin: 0 10px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	transition: border-bottom 0.3s;
+}
+
+.normal-nav a:hover {
+	padding-bottom: 20px;
+	border-bottom: 3px solid #fff;
+}
+
+.bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 100;
+	display: none;
+}
+
+.responsive-nav {
+	width: 100%;
+	padding: 40px 20px;
+	box-sizing: border-box;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+
+.responsive-nav a {
+	text-decoration: none;
+	color: #000;
+	font-weight: 600; 
+}
+
+.responsive-nav a:hover {
+	color: #666;
+}
+
+#close {
+	border: none;
+	background: transparent;
+	padding: 0px 10px 10px;
+}
+
+.buttons {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.buttons button {
+	padding: 22px 30px;
+	border: none;
+	border-radius: 0;
+	background: #000;
+	transition: background 0.3s;
+}
+
+.buttons button:hover {
+	background: hsl(0, 0%, 27%);
+}
+
+.main {
+	position: relative;
+	padding: 7% 7% 9% 7%;
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #fff;
+	height: 100%;
+	max-width: 800px;
+}
+
+.article h2 {
+	font-size: 34px;
+}
+
+.article p {
+	margin: 20px auto;
+	color: hsl(0, 0%, 63%);
+	line-height: 1.5;
+}
+
+.article a {
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	height: fit-content;
+	text-decoration: none;
+	transition: opacity 0.3s;
+}
+
+.article a:hover {
+	opacity: 0.5;
+}
+
+.article a p {
+	font-size: 18px;
+	letter-spacing: 10px;
+	height: fit-content;
+	margin: 0;
+	margin-right: 20px;
+	white-space: nowrap;
+	color: #000;
+}
+.article a img {
+	object-fit: contain;
+	height: fit-content;
+}
+
+.bottom-container {
+	display: flex;
+}
+
+.bottom-item-1{
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.bottom-item-2{
+	width: 400px;
+	flex-grow: 1.2;
+	padding: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.bottom-item-3{
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bottom-item-2 h3 {
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 6px;
+}
+
+.bottom-item-2 p {
+	color: hsl(0, 0%, 63%);
+	line-height: 1.5;
+	margin: 20px auto;
+}
+
+@keyframes toshow {
+	0%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes dissapear {
+	0%{
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes grow {
+	0%{
+		width: 0;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 800px){
+
+	.header {
+		padding-right: 5%;
+	}
+
+	.buttons button {
+		padding: 16px 24px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.top-container {
+		flex-direction: column;
+	}
+
+	.buttons {
+		bottom: auto;
+		left: auto;
+		right: 0;
+		top: 0;
+		transform: translateX(0);
+		transform: translateY(-100%);
+	}
+
+	.header {
+		width: 100%;
+		padding: 10% 6%;
+		height: 45vh;
+		min-height: 350px;
+		box-sizing: border-box;
+		background: url("images/mobile-image-hero-1.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
+	.header img {
+		margin: 0 auto;
+	}
+
+	#nav-button {
+		background: transparent;
+		z-index: 50;
+		border: none;
+		display: inherit;
+	}
+
+	.normal-nav {
+		display: none;
+	}
+
+	.bottom-container {
+		flex-direction: column;
+	}
+
+	.bottom-item-2 {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 10%;
+	}
+
+	.bottom-item-1, .bottom-item-3 {
+		width: 100%;
+	}
+
+	.img-container {
+		width: 100%;
+	}
+
+	.main {
+		position: relative;
+		padding: 15% 7% 15% 7%;
+	}
+
+	.article a p {
+		white-space: inherit;
+	}
+}
